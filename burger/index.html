@@ -1,0 +1,114 @@
+<html>
+	<head>
+	 	<meta name="viewport" content="width=device-width, initial-scale=1" />  
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta charset="UTF-8" />
+		<title>Burgerr - Your Delicious Burger</title>
+		<link href="css/simple-grid.min.css" rel="stylesheet" media="screen" />
+		<link href="css/stylesheet.css" rel="stylesheet" media="screen" />
+	</head>
+	
+	<body>
+		<header>
+			<div class="container">
+				<div class="col-6">
+					<div class="col-12"><a href="./main.html" class="logo">BURGERR</a></div>
+					<div class="sub-logo col-12">Your Delicious Burger</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-6">
+					<div id="control">
+
+						<div class="col-12">
+							<button id="reset">RESET</button>
+							<div id="trash"> 
+								<p>DRAG HERE TO RETURN</p>
+							</div>
+						</div>
+
+						<div class="col-12">
+							<div>Drag your burger bellow</div>
+							<button id="process">ORDER</button> 
+							<div id="order"></div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-6">
+
+					<div id="item" class="col-12">
+						<div class="row">
+							<a class="prev">&#10094;</a>
+		 					<a class="next">&#10095;</a>
+		 				</div>
+
+						<div class="slide"> 
+							<div class="desc">Vegetable - $0.5</div>
+							<img src="img/vegetable.png" id="2"> 
+						</div>
+						<div class="slide"> 
+							<div class="desc">Beef - $5</div>
+							<img src="img/beef.png" id="3"> 
+						</div>
+						<div class="slide"> 
+							<div class="desc">Egg - $2</div>
+							<img src="img/egg.png" id="4"> 
+						</div>
+						<div class="slide"> 
+							<div class="desc">Tomato - $1</div>
+							<img src="img/tomato.png" id="5"> 
+						</div>
+						<div class="slide"> 
+							<div class="desc">Cheese - $2</div>
+							<img src="img/cheese.png" id="6"> 
+						</div>
+						<div class="slide"> 
+							<div class="desc">Onion - $1</div>
+							<img src="img/onion.png" id="7"> 
+						</div>
+						<div class="slide"> 
+							<div class="desc">Pikle - $1</div>
+							<img src="img/pickle.png" id="8"> 
+						</div>
+					</div>
+
+					<div class="col-12"> 
+						<div class="det">Detail Order</div>
+						<div id="table-detail"> 
+							<table id="detail"></table>
+						</div>
+						<div><table id="total"></table></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<footer>
+
+		</footer>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/item.js"></script>
+		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			var key = undefined;
+
+			$(document).on('keydown', function(event){
+				if(event.key === "ArrowRight" || event.which === "39"){
+					next();
+				}
+				if(event.key === "ArrowLeft" || event.which === "37"){
+					prev();
+				}
+			});
+		</script>
+	</body>
+</html>
